@@ -34,116 +34,26 @@
             </div>
 
 
+             <form id="frmSearch" class="search2" method="get" action="default.html">
+
+              <input class="search2" id="txtSearch" type="text" name="serach_bar" size="31" maxlength="255"       
+              value="" 
+              style="
+              margin-top: 8%; 
+              position: absolute; 
+              right: 1%;
+              margin-right: 5%;
+              border: 1px solid black;
+              background-color: rgb(255, 255, 255);
+              border-radius: 14px;
+              padding: 9px;
+              width: 350px; 
+              "
+              placeholder="search...">
+              <input class="search2" type="hidden" name="sitesearch" value="default.html">
+
+
            
-            <div class="searchbox">
-              <input type="search" value="" id="search" placeholder="search..." onchange="openPage()">
-              </div>
-              <script>
-                function openPage(){
-                  var E = document.getElementById("search").value;
-
-                  if (E === "pricing"){
-                    window.open("pricing", "_self");
-                  }
-
-                  if (E === "prcing"){
-                    window.open("pricing", "_self");
-                  }
-
-                  if (E === "leave a review"){
-                    window.open("https://forms.gle/brgSnravbHpGVZGa6", "_self");
-                  }
-                  if (E === "leave review"){
-                    window.open("https://forms.gle/brgSnravbHpGVZGa6", "_self");
-                  }
-
-                  if (E === "review"){
-                    window.open("https://forms.gle/brgSnravbHpGVZGa6", "_self");
-                  }
-
-                  if (E === "raking"){
-                    window.open("raking", "_self");
-                  }
-
-                  if (E === "raking services"){
-                    window.open("raking", "_self");
-                  }
-
-                  if (E === "rake"){
-                    window.open("raking", "_self");
-                  }
-
-                  if (E === "mowing"){
-                    window.open("mowing", "_self");
-                  }
-
-                  if (E === "mowing services"){
-                    window.open("mowing", "_self");
-                  }
-
-                  if (E === "mow"){
-                    window.open("mowing", "_self");
-                  }
-
-                  if (E === "shovel"){
-                    window.open("shovel", "_self");
-                  }
-
-                  if (E === "shoveling"){
-                    window.open("shovel", "_self");
-                  }
-
-                  if (E === "shoveling services"){
-                    window.open("shovel", "_self");
-                  }
-
-                  if (E === "poop"){
-                    window.open("poopscooping", "_self");
-                  }
-
-                  if (E === "poop scooping"){
-                    window.open("poopscooping", "_self");
-                  }
-
-                  if (E === "poop scooping services"){
-                    window.open("poopscooping", "_self");
-                  }
-
-                  if (E === "scooping services"){
-                    window.open("poopscooping", "_self");
-                  }
-
-                  if (E === "review"){
-                    window.open("https://forms.gle/brgSnravbHpGVZGa6", "_self");
-                  }
-
-                  if (E === "leave a review"){
-                    window.open("https://forms.gle/brgSnravbHpGVZGa6", "_self");
-                  }
-
-                  if (E === "rate"){
-                    window.open("https://forms.gle/brgSnravbHpGVZGa6", "_self");
-                  }
-
-                  if (E === "contact"){
-                    window.open("mailto:spyardservices@gmail.com", "_self");
-                  }
-
-                  if (E === "call"){
-                    window.open("tel:780-720-6245", "_self");
-                  }
-
-                  if (E === "socials"){
-                    window.open("https://www.youtube.com/channel/UCyv8rwi0dGRamAwBNdXbOKQ", "_self");
-                  } else {
-                window.open("searchnotfound");
-                }
-                
-                
-                 
-                 
-                }
-              </script>
 
               <div class="searchtwo">
                 <br>
@@ -473,9 +383,11 @@
 
 
 
-    <style>
-
-      
-    </style>
+    <script type="text/javascript">
+      document.getElementById('frmSearch').onsubmit = function() {
+          window.location = 'https://www.sherwoodparkyards.com/' + document.getElementById('txtSearch').value;
+          return false;
+      }
+  </script>
 </body>
 </html>
